@@ -14,17 +14,10 @@ A composer workflow based Drupal repository to be used as a base for Drupal proj
 
 ### Usage
 ---------
-- Clone the repository
+- Using composer get the repository
 
 ```bash
-git clone git@bitbucket.org:malabya/drupal.git PROJECTNAME
-```
-
-- From the repository, install the composer dependencies
-
-```bash
-cd PROJECTNAME
-composer install
+composer create-project valuebound/drupal drupal
 ```
 
 - Run the docker container
