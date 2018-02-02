@@ -1,0 +1,24 @@
+version: '3'
+services:
+  web:
+    image: valuebound/appserver
+    ports:
+      - "8000-8080:80"
+      - "3000-3080:443"
+    restart: always
+    volumes: 
+      - ./:/var/www
+    depends_on:
+      - database
+    links:
+      - database
+  database:
+    image: mariadb
+    ports:
+      - "3310-3380:3306"
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: admin
+      MYSQL_DATABASE: drupal
+      MYSQL_USER: drupal
+      MYSQL_PASSWORD: drupal
