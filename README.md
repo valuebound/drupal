@@ -1,6 +1,10 @@
 Drupal Base
 ============
 
+[![Latest Stable Version](https://poser.pugx.org/valuebound/drupal/v/stable)](https://packagist.org/packages/valuebound/drupal)
+
+[![License](https://poser.pugx.org/valuebound/drupal/license)](https://packagist.org/packages/valuebound/drupal)
+
 A composer workflow based Drupal repository to be used as a base for Drupal projets. It is bundled with standard tools for development like Drush, Drupal console, PHPUnit & PHPCS. A set of highly popular & necessary contributed modules is also included to serve a starting for any Drupal 8 project.
 
 ***Follow the below steps to create a new projects***
