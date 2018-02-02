@@ -9,9 +9,7 @@ A composer workflow based Drupal repository to be used as a base for Drupal proj
 
 ### Pre-Requisites
 -----------
- - **PHP7.1** - PHP7.1 is the requirement for the project
  - **Docker** - https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-on-ubuntu-16-04
-
  - **Docker Compose** - https://www.digitalocean.com/community/tutorials/how-to-install-docker-compose-on-ubuntu-16-04
  
 
