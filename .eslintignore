@@ -1,8 +1,0 @@
-web/core/**/*
-web/vendor/**/*
-web/sites/**/files/**/*
-web/libraries/**/*
-web/sites/**/libraries/**/*
-pweb/rofiles/**/libraries/**/*
-**/js_test_files/**/*
-**/node_modules/**/*
