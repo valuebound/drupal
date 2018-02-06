@@ -16,11 +16,15 @@ A composer workflow based Drupal repository to be used as a base for Drupal proj
 ### Usage
 ---------
 - Using composer get the repository
-
 ```bash
 composer create-project valuebound/drupal drupal
 ```
 
+- Update `docker-compose.yml` file to change the container name suitable for your app.
+```
+container-name: webapp-####-#### > container-name: webapp-drupal-dev
+container-name: db-####-#### > container-name: db-drupal-dev
+```
 - Run the docker container
 ```bash
 docker-compose up -d
