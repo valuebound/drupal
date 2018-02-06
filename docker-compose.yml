@@ -2,7 +2,7 @@ version: '3'
 services:
   web:
     image: valuebound/appserver
-    container-name: webapp-####-####
+    container_name: webapp-####-####
     ports:
       - "8000-8080:80"
       - "3000-3080:443"
@@ -15,7 +15,7 @@ services:
       - database
   database:
     image: mariadb
-    conatiner-name: db-####-####
+    container_name: db-####-####
     ports:
       - "3310-3380:3306"
     restart: always
