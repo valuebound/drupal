@@ -19,6 +19,7 @@ A composer workflow based Drupal repository to be used as a base for Drupal proj
 ```bash
 composer create-project valuebound/drupal drupal
 ```
+- Copy exmaple.docker-compose.yml to docker-compose.yml.
 
 - Update `docker-compose.yml` file to change the container name suitable for your app.
 ```

@@ -182,4 +182,6 @@ fabric.properties
 ### Macos ###
 .DS_Store
 
+### docker-compose.yml file
+docker-compose.yml
 # End of https://www.gitignore.io/api/node,sass,less,drupal8,composer,netbeans,phpstorm

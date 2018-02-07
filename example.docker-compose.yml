@@ -18,6 +18,8 @@ services:
     container_name: db-####-####
     ports:
       - "3310-3380:3306"
+    volumes:
+      - ./dump.sql:/docker-entrypoint-initdb.d
     restart: always
     environment:
       MYSQL_ROOT_PASSWORD: admin
