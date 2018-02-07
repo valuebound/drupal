@@ -2,7 +2,7 @@ version: '3'
 services:
   web:
     image: valuebound/appserver
-    container_name: webapp-####-####
+    container_name: webapp-${PROJECT_NAME}-${ENV_NAME}
     ports:
       - "8000-8080:80"
       - "3000-3080:443"
@@ -15,14 +15,14 @@ services:
       - database
   database:
     image: mariadb
-    container_name: db-####-####
+    container_name: db-${PROJECT_NAME}-${ENV_NAME}
     ports:
       - "3310-3380:3306"
     volumes:
-      - ./dump.sql:/docker-entrypoint-initdb.d
+      - ${DB_VOLUME}:/docker-entrypoint-initdb.d/dump.sql
     restart: always
     environment:
-      MYSQL_ROOT_PASSWORD: admin
-      MYSQL_DATABASE: drupal
-      MYSQL_USER: drupal
-      MYSQL_PASSWORD: drupal
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+      MYSQL_DATABASE: ${MYSQL_DATABASE}
+      MYSQL_USER: ${MYSQL_USER}
+      MYSQL_PASSWORD: ${MYSQL_PASSWORD}
