@@ -1,14 +1,29 @@
 version: '3'
+# Use it for traefik
+# networks:
+#   proxy:
+#     external: true
+#   internal:
+#     external: false
 services:
   web:
     image: valuebound/appserver
     container_name: webapp-${PROJECT_NAME}-${ENV_NAME}
+    restart: always
+    # Use it by default
     ports:
       - "8000-8080:80"
-      - "3000-3080:443"
-    restart: always
     volumes: 
       - ./:/var/www
+    # Used for traefik
+    # labels:
+    #   - traefik.backend=${PROJECT_NAME}-${ENV_NAME}
+    #   - traefik.frontend.rule=Host:${ENV_NAME}-${PROJECT_NAME}.codespace.io
+    #   - traefik.docker.network=${TRAEFIK_NETWROK_PROXY}
+    #   - traefik.port=80
+    # networks:
+    #   - internal
+    #   - ${TRAEFIK_NETWROK_PROXY}
     depends_on:
       - database
     links:
@@ -26,3 +41,8 @@ services:
       MYSQL_DATABASE: ${MYSQL_DATABASE}
       MYSQL_USER: ${MYSQL_USER}
       MYSQL_PASSWORD: ${MYSQL_PASSWORD}
+    # Used for traefik
+    # networks:
+    #   - internal
+    # labels:
+    #   - traefik.enable=false
